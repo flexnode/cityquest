@@ -17,8 +17,13 @@ class Admin::TrailLocationsController < AdminController
   end
 
   def destroy
-    destroy!  { redirect_to edit_admin_trail_path(@trail_location.trail_id) }
+    destroy! do |success, failure|
+      success.html { redirect_to edit_admin_trail_path(@trail_location.trail_id) }
+      failure.html do 
+        flash[:error] = "Fail to delete location"
+        redirect_to edit_admin_trail_path(@trail_location.trail_id)
+      end
+    end
   end
-
 
 end

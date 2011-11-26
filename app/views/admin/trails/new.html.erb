@@ -9,6 +9,7 @@
 <%= simple_form_for [:admin, @trail] do |f| %>
 
   <%= f.input :name, :input_html => { :class => "span8" } %>
+  <%= f.input :description,  :input_html => { :class => "span8", :rows => 5 } %>
 
   <div class="actions">
     <%= f.button :submit, :class => "primary btn" %>&nbsp;

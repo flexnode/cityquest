@@ -16,6 +16,18 @@
 <%= simple_form_for [:admin, @trail] do |f| %>
 
   <%= f.input :name, :input_html => { :class => "span8" } %>
+  <%= f.input :description,  :input_html => { :class => "span8", :rows => 5 } %>
+  <div class="input">
+    <ul class="inputs-list">
+      <li>
+        <label>
+          <input type="checkbox" name="trail[featured]" value="1" id="trail_featured" class="boolean optional" <% if @trail.featured? %>checked="true"<% end %>>
+          <span>Feature Trail on Front Page</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+  <br />
 
   <div class="offset-form">
     <h3>Trail Locations</h3>
@@ -23,7 +35,9 @@
       <p>No locations added to this trail yet.</p>
     <% else %>
     <table class="zebra-striped">
-      <%= render @trail.locations %>
+      <%- for trail_location in @trail.trail_locations -%>
+        <%= render :partial => "location", :locals => { :location => trail_location.location, :trail => trail_location.trail, :id => trail_location.id } %>
+      <% end -%>
     </table>
     <% end %>
   </div>

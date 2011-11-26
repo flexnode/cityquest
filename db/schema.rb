@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111126081605) do
+ActiveRecord::Schema.define(:version => 20111126122122) do
 
   create_table "locations", :force => true do |t|
     t.string   "address"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(:version => 20111126081605) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
+    t.boolean  "featured",    :default => false
   end
 
   create_table "users", :force => true do |t|
@@ -41,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20111126081605) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "nick"
     t.string   "gender"
     t.string   "dob"
     t.string   "location"
@@ -49,7 +52,6 @@ ActiveRecord::Schema.define(:version => 20111126081605) do
     t.string   "uid"
     t.string   "token"
     t.text     "raw_data"
-    t.string   "nick"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
