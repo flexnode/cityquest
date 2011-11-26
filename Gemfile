@@ -16,7 +16,7 @@ gem 'kaminari'
 gem 'therubyracer', '~>0.9.2'
 gem 'mail_view'
 gem 'geocoder'  
-
+gem 'hashie'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -57,4 +57,4 @@ group :test do
 #  gem 'factory_girl_rails'
 #  gem 'turn', :require => false
 end
-gem "mocha", :group => :test
+
