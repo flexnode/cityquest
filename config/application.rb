@@ -41,6 +41,7 @@ module Hacktonkk2011
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.assets.paths += %W(#{config.root}/vendor/assets/javascripts/external.js)
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

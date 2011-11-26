@@ -1,0 +1,13 @@
+//= require jquery
+//= require jquery_ujs
+//= require ./json2.js
+//= require ./modernizr-2.0.min.js
+//= require ./respond.min.js
+//= require ./bootstrap-alerts.js
+//= require ./bootstrap-button.js
+//= require ./bootstrap-dropdown.js
+//= require ./bootstrap-modal.js
+//= require ./bootstrap-twipsy.js
+//= require ./bootstrap-popover.js
+//= require ./bootstrap-scrollspy.js
+//= require ./bootstrap-tabs.js
