@@ -14,11 +14,15 @@ body {
   height: 180px;
   background-color: #2B7EB5;
   border-top: 5px solid #134A84;
+  font-family: 'Rammetto One', cursive;
 }
 
-.header h1, .header p {
+.header h2, .header p {
   color: #FFF5C6;
   margin: 0 0 10px;
+  font-weight: 400;
+  text-shadow: 2px 2px 2px #333;
+  filter: dropshadow(color=#333, offx=2, offy=2);
 }
 
 .header p {
@@ -38,20 +42,93 @@ body {
   color: #333;
   font-size: 30px;
   font-weight: bold;
-  font-family: Georgia;
+  font-family: 'Rammetto One', cursive;
   height: 100px;
   width: 100px;
-  margin: 20px;
+  margin: 25px 20px 20px 20px;
+  text-align: center;
+}
+
+.header .logo .city {
+  text-transform: uppercase;
+  color: #EBE1A4;
+  font-size: 70px;
+  line-height: 72px;
+  text-shadow: 2px 2px 2px #333;
+  filter: dropshadow(color=#333, offx=2, offy=2);
+}
+
+.header .logo .divider {
+  margin-bottom: 1px;
+  height: 5px;
+  width: 200px;
+  background-color: #134A84;
+}
+
+.header .logo .quest {
+  color: #74B106;
+  font-size: 40px;
+  letter-spacing: 6px;
+  text-shadow: 2px 2px 2px #333;
+  filter: dropshadow(color=#333, offx=2, offy=2);
+  padding-left: 3px;
+  line-height: 50px;
 }
   
 .content {
-  min-height: 500px;
+  color: #333;
+}
+
+.content h1 {
+  font-size: 40px;
+  font-family: 'Rammetto One', cursive;
+  text-shadow: 2px 2px 2px #F2CB8A;
+  filter: dropshadow(color=#F2CB8A, offx=2, offy=2);
+}
+
+.content .title {
+  text-align: center;
+  padding: 30px 0 10px 0;
+}
+
+.image img {
+  border: 10px solid #fff;
+  width: 280px;
+  height: 200px;
+}
+
+.quest {
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.quest h3 {
+  color: #DB5730;
+  font-size: 36px;
+  font-family: 'Rammetto One', cursive;
+  text-shadow: 2px 2px 2px #F2CB8A;
+  filter: dropshadow(color=#F2CB8A, offx=2, offy=2);
+  margin-bottom: 15px;
+}
+
+.quest p {
+  color: #DB5730;
+  font-size: 24px;
+  font-family: 'Rammetto One', cursive;
+  text-shadow: 2px 2px 2px #F2CB8A;
+  filter: dropshadow(color=#F2CB8A, offx=2, offy=2);
 }
 
 .footer {
-  padding-top: 20px;
+  padding: 20px;
   background-color: #4B9816;
+  color: #fff;
   -moz-box-shadow: 0px -5px 5px #2E6E02;
   -webkit-box-shadow: 0px -5px 5px #2E6E02;
   box-shadow: 0px -5px 5px #2E6E02;
+}
+
+.footer h3 {
+  color: #fff;
 }

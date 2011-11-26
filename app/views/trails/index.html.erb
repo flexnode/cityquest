@@ -4,10 +4,12 @@
   <div class="header">
     <div class="container">
     <div class="logo">
-      CityQUEST
+      <span class="city">City</span><br />
+      <div class="divider"></div>
+      <span class="quest">QUEST</span>
     </div>
     <div class="desc">
-      <h1>Go on a Quest &amp; Explore the City</h1>
+      <h2>Go on a Quest &amp; Explore the City</h2>
       <p>Discover exciting venues and get rewarded for it!</p>
       <%= link_to image_tag("facebook_connect.png"), "#" %>
     </div>
@@ -36,6 +38,26 @@
   </div>
 <% end -%>
 
-<div class="content">
+<div class="content container">
+  <div class="title">
+    <h1>Today's Quest</h1>
+  </div>
+
+  <div class="images row">
+    <div class="span-one-third image">
+      <%= image_tag("quests/1.jpeg") %>
+    </div>
+    <div class="span-one-third image">
+      <%= image_tag("quests/2.jpeg") %>
+    </div>
+    <div class="span-one-third image">
+      <%= image_tag("quests/3.jpeg") %>
+    </div>
+  </div>
+
+  <div class="quest">
+    <h3>Food Frenzy!</h3>
+    <p>6 Finger-licking Meals at 6 Awesome Restaurants</p>
+  </div>
 
 </div>
