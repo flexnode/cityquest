@@ -12,7 +12,9 @@
   <%= f.input :latitude, :input_html => { :class => "span8" } %>
   <%= f.input :longitude, :input_html => { :class => "span8" } %>
 
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=15&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+  <div class="offset-form">
+    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=15&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+  </div>
 
 
   <div class="actions">

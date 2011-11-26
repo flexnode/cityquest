@@ -1,0 +1,41 @@
+<%- content_for :page_title, "#{@user.name}'s Latest Activity" %>
+
+<div class="content container">
+  <div class="title">
+    <h1><%= @user.name %>'s Latest Activity</h1>
+  </div>
+
+  <div class="activity">
+    <div class="map">
+      <%= image_tag("http://maps.google.com/maps/api/staticmap?size=300x200&sensor=false&zoom=15&markers=5.9834%2C116.093") %>
+    </div>
+    <div class="info">
+      <h3>Kompleks Sukan Likas</h3>
+      <p>Checked-in here 3 hours ago</p>
+
+      <div class="reward">
+        <%= image_tag("trophy.jpeg") %>
+        <p><%= @user.name %> was awarded the kick-ass trophy!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="map">
+      <%= image_tag("http://maps.google.com/maps/api/staticmap?size=300x200&sensor=false&zoom=15&markers=5.9834%2C116.093") %>
+    </div>
+    <div class="info">
+      <h3>Kompleks Sukan Likas</h3>
+      <p>Checked-in here 3 hours ago</p>
+
+      <div class="reward">
+        <%= image_tag("trophy.jpeg") %>
+        <p><%= @user.name %> was awarded the kick-ass trophy!</p>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
