@@ -1,0 +1,51 @@
+/*
+ *= require bootstrap.min
+ *= require_self
+*/
+
+body {
+  padding-top: 40px;
+  background-color: #DCEAF4;
+}
+
+.hide {
+  display: none;
+}
+
+.container .row .span12 {
+  margin-left: 0;
+  width: 720px;
+}
+
+.container .content {
+  padding: 20px;
+}
+
+.container .sidebar {
+  padding: 20px 10px;
+  width: 200px;
+}
+
+.footer {
+  padding: 15px 20px;
+  color: #999;
+}
+
+.content {
+  background-color: #fff;
+  min-height: 400px;
+}
+
+label {
+  margin-right: 20px;
+}
+
+.help-inline {
+  display: block;
+  margin: 5px 0 0 150px;
+}
+
+td.action-links {
+  vertical-align: middle;
+  text-align: right;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield :page_title %> - Admin</title>
+  <!-- Meta tags -->
+  <%= yield :meta_tags %>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" media="all" href=""/>
+  <%= stylesheet_link_tag    "admin" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render :partial => "admin/shared/nav" %>
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="content">
+          <%#= alert_messages %>
+          <%= yield %>
+        </div>
+      </div>
+      <div class="span4 sidebar">
+        <%= yield :sidebar %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12 footer">
+        CityQuest was hacked together by <%= link_to "Flexnode Solutions", "http://flexnode.com" %>
+      </div>
+    </div>
+  </div>
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+    <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+  <![endif]-->
+  <%= javascript_include_tag "admin" %>
+</body>
+</html>

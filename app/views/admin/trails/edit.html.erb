@@ -1,0 +1,17 @@
+<%- content_for :page_title, "Edit Trail" %>
+
+<%- content_for :sidebar do -%>
+  
+<% end -%>
+
+<h1>Edit Trail</h1>
+
+<%= simple_form_for [:admin, @trail] do |f| %>
+
+  <%= f.input :name, :input_html => { :class => "span8" } %>
+
+  <div class="actions">
+    <%= f.button :submit, :class => "primary btn" %>&nbsp;
+  </div>
+
+<% end %>

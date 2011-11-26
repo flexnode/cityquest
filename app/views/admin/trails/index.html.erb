@@ -1,0 +1,17 @@
+<%- content_for :page_title, "Trails" %>
+
+<%- content_for :sidebar do -%>
+  <%= link_to "Create a new trail", new_admin_trail_path, :class => "btn success" %>
+<% end -%>
+
+<h1>Trails</h1>
+
+<table class="zebra-striped">
+  <thead>
+    <tr>
+      <th>Trail Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <%= render @trails %>
+</table>
