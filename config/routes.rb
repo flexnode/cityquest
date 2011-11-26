@@ -63,8 +63,14 @@ Cityquest::Application.routes.draw do
 
   root :to => 'trails#index'
 
+  namespace :mobile do
+    root :to => 'profile#show'
+    resource :profile
+    resources :locations
+  end
+
   namespace :admin do
-    root :to => 'trails#index'
+    root :to => 'quests#index'
     resources :trails do 
       resources :trail_locations
     end
@@ -72,5 +78,6 @@ Cityquest::Application.routes.draw do
       get :search
     end
   end
+
 
 end
