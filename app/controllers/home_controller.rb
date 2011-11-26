@@ -5,4 +5,8 @@ class HomeController < ApplicationController
     @featured_trail = Trail.featured.first
   end
 
+  def destroy
+    sign_out :user
+    redirect_to root_path
+  end
 end

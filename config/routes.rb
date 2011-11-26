@@ -55,8 +55,9 @@ Cityquest::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } do 
-    get 'sign_in', :to => 'home#index',     :as => :new_user_session
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" },  :skip => [:sessions] do 
+    get 'sign_in',  :to => 'home#index', :as => :new_user_session
+    get 'sign_out', :to => 'home#destroy', :as => :destroy_user_session
   end
 
   devise_scope :users do
@@ -68,7 +69,7 @@ Cityquest::Application.routes.draw do
   resources :users
 
   namespace :mobile do
-    root :to => 'profile#show'
+    root :to => 'profiles#show'
     resource :profile
     resources :locations
   end
