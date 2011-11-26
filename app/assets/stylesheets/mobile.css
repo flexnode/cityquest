@@ -27,3 +27,23 @@ body {
 .content {
   padding-top: 50px;
 }
+
+
+.user_info p {
+  margin: 15px 60px 0 0;
+  line-height: 24px;
+}
+
+.user_info img {
+  float: right;
+}
+
+.content h1 {
+  font-size: 40px;
+  font-family: 'Rammetto One', cursive;
+  text-shadow: 2px 2px 2px #F2CB8A;
+  filter: dropshadow(color=#F2CB8A, offx=2, offy=2);
+}
+.content {
+  color: #333;
+}
