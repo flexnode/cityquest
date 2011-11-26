@@ -49,3 +49,7 @@ td.action-links {
   vertical-align: middle;
   text-align: right;
 }
+
+.offset-form {
+  margin-left: 150px;
+}
