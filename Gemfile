@@ -15,7 +15,7 @@ gem 'simple_form'
 gem 'kaminari'
 gem 'therubyracer', '~>0.9.2'
 gem 'mail_view'
-
+gem 'geocoder'  
 
 
 # Gems used only for assets and not required
@@ -47,13 +47,14 @@ end
 
 group :test do
   # Pretty printed test output
-  gem 'turn', :require => false
-  gem 'minitest', require: 'minitest/spec'
-  gem 'spinach-rails'
-  gem 'launchy'
-  gem 'capybara', '~> 1.1.2'
-  gem 'headless'
-  gem 'database_cleaner'
-  gem 'factory_girl_rails'
-  gem 'turn', :require => false
+#  gem 'turn', :require => false
+#  gem 'minitest', require: 'minitest/spec'
+#  gem 'spinach-rails'
+#  gem 'launchy'
+#  gem 'capybara', '~> 1.1.2'
+#  gem 'headless'
+#  gem 'database_cleaner'
+#  gem 'factory_girl_rails'
+#  gem 'turn', :require => false
 end
+gem "mocha", :group => :test
