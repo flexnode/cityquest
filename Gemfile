@@ -52,7 +52,6 @@ group :test do
   gem 'spinach-rails'
   gem 'launchy'
   gem 'capybara', '~> 1.1.2'
-  gem 'capybara-webkit', '~> 0.7.2'
   gem 'headless'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
