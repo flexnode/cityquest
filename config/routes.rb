@@ -61,6 +61,7 @@ Cityquest::Application.routes.draw do
   namespace :admin do
     root :to => 'trails#index'
     resources :trails
+    resources :locations
   end
 
 end

@@ -1,0 +1,19 @@
+<%- content_for :page_title, "New Location" %>
+
+<%- content_for :sidebar do -%>
+  
+<% end -%>
+
+<h1>New Location</h1>
+
+<%= simple_form_for [:admin, @location] do |f| %>
+
+  <%= f.input :address, :input_html => { :class => "span8" } %>
+  <%= f.input :latitude, :input_html => { :class => "span8" } %>
+  <%= f.input :longitude, :input_html => { :class => "span8" } %>
+
+  <div class="actions">
+    <%= f.button :submit, :class => "primary btn" %>&nbsp;
+  </div>
+
+<% end %>

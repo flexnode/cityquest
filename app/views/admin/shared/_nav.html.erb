@@ -4,8 +4,8 @@
         <div class="container">
           <h3><%= link_to "City Quest", admin_root_path %></h3>
           <ul class="nav">
-            <li class="<%= "active" if current_page?(admin_root_path) %>"><%= link_to "Trails", admin_root_path %></li>
-            <li><%= link_to "New Trail", new_admin_trail_path %></li>
+            <li class="<%= "active" if controller.controller_name == 'trails' %>"><%= link_to "Trails", admin_trails_path %></li>
+            <li class="<%= "active" if controller.controller_name == 'locations' %>"><%= link_to "Locations", admin_locations_path %></li>
           </ul>
           <ul class="nav secondary-nav">
             <li class="dropdown">
