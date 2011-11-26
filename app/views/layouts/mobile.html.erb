@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cityquest</title>
+  <link href='http://fonts.googleapis.com/css?family=Rammetto+One' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "mobile" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="header">
+    <%= yield :page_title %>
+  </div>
+<%= yield %>
+
+</body>
+</html>

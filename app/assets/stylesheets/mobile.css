@@ -1,0 +1,25 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require bootstrap.min
+ *= require_self
+*/
+
+
+body {
+  background-color: #FFF5C6;
+}
+
+.header {
+  position: fixed;
+  height: 45px;
+  background-color: #134A84;
+  color: #EBE1A4;
+  font-family: 'Rammetto One', cursive;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  line-height: 45px;
+  vertical-align: middle;
+}
