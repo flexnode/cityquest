@@ -17,3 +17,14 @@
   </div>
 
 <% end %>
+
+
+<%=  form_for [:admin, @location], :url => new_admin_location_path, :method => :get  do |f| %>
+  <%= text_field_tag :query %>
+  <%= f.submit :search, :class => "primary btn" %>&nbsp;
+<% end %>
+
+
+<%= for result in @search_results do %>
+  <p><%= result[:name] %> <%= "[#{result[:latitude]}, #{result[:longitude]}]" %></p>
+<% end unless @search_results.blank? %>

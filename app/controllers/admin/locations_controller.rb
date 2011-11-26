@@ -11,5 +11,13 @@ class Admin::LocationsController < AdminController
       @locations = Location.all  
     end  
   end
+
+
+  def new
+    if params[:query].present?  
+      @search_results = Foursquare.search(params[:query])
+    end
+    super
+  end
   
 end
