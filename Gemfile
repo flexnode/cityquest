@@ -18,6 +18,11 @@ gem 'mail_view'
 gem 'geocoder'  
 gem 'hashie'
 
+# Faraday for API calls
+gem "faraday-stack", "~> 0.1.3"
+gem "faraday_middleware"
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
