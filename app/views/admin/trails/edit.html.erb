@@ -2,6 +2,8 @@
 
 <%- content_for :sidebar do -%>
   
+  <p><%= link_to "Delete this trail", admin_trail_path(@trail), :method => :delete, :confirm => "Are you sure?", :class => "btn danger" %></p>
+
   <h3>Add location to trail</h3>
   <%= text_field_tag :location_id, "", { :id => "new-trail-location-id", :class => "span2", :placeholder => "Location ID" } %><br /><br />
   <%= submit_tag "Add Location", :class => "primary btn", :id => "new-trail-location" %>
