@@ -5,9 +5,10 @@
   <p><%= link_to "Delete this trail", admin_trail_path(@trail), :method => :delete, :confirm => "Are you sure?", :class => "btn danger" %></p>
 
   <h3>Add location to trail</h3>
-  <%= text_field_tag :location_id, "", { :id => "new-trail-location-id", :class => "span2", :placeholder => "Location ID" } %><br /><br />
-  <%= submit_tag "Add Location", :class => "primary btn", :id => "new-trail-location" %>
-
+    <%= simple_form_for [:admin, @trail, @trail_location] do |f| %>
+      <%= f.association :location, :collection => Location.to_dropdown, :prompt => "Choose a Location" %>
+      <%= f.button :submit, :value => "Add Location", :class => "primary btn", :id => "new-trail-location" %>&nbsp;
+    <% end %>  
 <% end -%>
 
 <h1>Edit Trail</h1>
@@ -19,7 +20,7 @@
   <div class="offset-form">
     <h3>Trail Locations</h3>
     <% if @trail.locations.blank? -%>
-    <p>No locations added to this trail yet.</p>
+      <p>No locations added to this trail yet.</p>
     <% else %>
     <table class="zebra-striped">
       <%= render @trail.locations %>

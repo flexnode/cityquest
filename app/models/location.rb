@@ -7,4 +7,9 @@ class Location < ActiveRecord::Base
   geocoded_by :address
   after_validation :geocode, :if => :address_changed?  
 
+
+  def self.to_dropdown
+    Location.all.map {|l| [l.address, l.id]}
+  end
+
 end

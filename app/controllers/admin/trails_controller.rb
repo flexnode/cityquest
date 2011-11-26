@@ -4,4 +4,9 @@ class Admin::TrailsController < AdminController
   respond_to :html
   actions :all, except: [:show]
 
+  def edit
+    @trail_location = TrailLocation.new
+    super
+  end
+
 end
