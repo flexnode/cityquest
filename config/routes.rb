@@ -55,7 +55,10 @@ Cityquest::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } do 
+    get 'sign_in', :to => 'home#index',     :as => :new_user_session
+  end
+
   devise_scope :users do
     get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
   end
