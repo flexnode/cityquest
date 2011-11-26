@@ -6,6 +6,12 @@
 
 <h1>Locations</h1>
 
+<%= form_tag admin_locations_path, :method => :get do %>  
+  <p>  
+    <%= text_field_tag :search, params[:search] %>  
+    <%= submit_tag "Search near (2 Miles)", :name => nil %>  
+<% end %>
+
 <table class="zebra-striped">
   <thead>
     <tr>

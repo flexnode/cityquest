@@ -4,4 +4,12 @@ class Admin::LocationsController < AdminController
   respond_to :html
   actions :all, except: [:show]
 
+  def index  
+    if params[:search].present?  
+      @locations = Location.near(params[:search], 2, :order => :distance)  
+    else  
+      @locations = Location.all  
+    end  
+  end
+  
 end

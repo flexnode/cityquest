@@ -12,8 +12,19 @@
   <%= f.input :latitude, :input_html => { :class => "span8" } %>
   <%= f.input :longitude, :input_html => { :class => "span8" } %>
 
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=15&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+
+
   <div class="actions">
     <%= f.button :submit, :class => "primary btn" %>&nbsp;
   </div>
+
+<h3>Nearby Locations</h3>  
+<ul>  
+<% for location in @location.nearbys(5) %>  
+  <li><%= link_to location.address, edit_admin_location_path(location) %> ↵  
+    (<%= location.distance.round(2) %> miles)</li>  
+<% end %>  
+</ul>  
 
 <% end %>
