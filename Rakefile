@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Hacktonkk2011::Application.load_tasks
+Cityquest::Application.load_tasks
