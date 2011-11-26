@@ -34,4 +34,23 @@ ActiveRecord::Schema.define(:version => 20111126081256) do
     t.datetime "updated_at"
   end
 
+  create_table "users", :force => true do |t|
+    t.string   "email",                              :default => "", :null => false
+    t.string   "encrypted_password",  :limit => 128, :default => "", :null => false
+    t.datetime "remember_created_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "gender"
+    t.string   "dob"
+    t.string   "location"
+    t.string   "avatar_url"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "token"
+    t.text     "raw_data"
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+
 end
