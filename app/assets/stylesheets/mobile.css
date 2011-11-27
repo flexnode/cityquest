@@ -49,7 +49,7 @@ body {
 }
 
 .profile {
-  padding: 5px;
+  padding: 5px 0 5px 5px;
 }
 
 .profile img {
@@ -58,7 +58,8 @@ body {
 }
 
 .profile p {
-  margin: 5px 0 0 70px;
+  width: 250px;
+  margin: 5px 0 0 65px;
   font-size: 16px;
   line-height: 20px;
   font-family: 'Rammetto One', cursive;
@@ -92,6 +93,7 @@ body {
 
 .checkin a {
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 ul.activity {
