@@ -8,13 +8,13 @@
 
 <div class="checkin">
   <p>Hurrah! You are now checked in @ </p>
-  <h3>Kompleks Sukan Likas</h3>
+  <h3><%= @location.address %></h3>
 </div>
 
 <ul class="activity media-grid">
   <li>
     <a href="#">
-      <%= image_tag("http://maps.google.com/maps/api/staticmap?size=300x200&sensor=false&zoom=15&markers=5.9834%2C116.093") %>
+      <%= image_tag("http://maps.google.com/maps/api/staticmap?size=300x200&sensor=false&zoom=15&markers=#{@location.latitude}%2C#{@location.longitude}") %>
     </a>
   </li>
 </ul>

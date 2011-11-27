@@ -8,14 +8,14 @@
 
 <div class="checkin">
   <p>Currently near</p>
-  <h3>Kompleks Sukan Likas</h3>
+  <h3><%= @nearby.address %></h3>
   <%= link_to "Check In Here", mobile_quest_path(:id => 1), :method => :put, :class => "btn success large" %>
 </div>
 
 <ul class="activity media-grid">
   <li>
     <a href="#">
-      <%= image_tag("http://maps.google.com/maps/api/staticmap?size=280x200&sensor=false&zoom=15&markers=5.9834%2C116.093") %>
+      <%= image_tag("http://maps.google.com/maps/api/staticmap?size=280x200&sensor=false&zoom=15&markers=#{@nearby.latitude}%2C#{@nearby.longitude}") %>
     </a>
   </li>
 </ul>
