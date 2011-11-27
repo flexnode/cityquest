@@ -68,6 +68,10 @@ Cityquest::Application.routes.draw do
 
   resources :users
 
+  namespace :api do
+    resource :users
+  end
+
   namespace :mobile do
     root :to => 'profiles#show'
     resource :profile
