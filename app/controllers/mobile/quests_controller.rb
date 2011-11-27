@@ -28,7 +28,7 @@ class Mobile::QuestsController < MobileController
     @location = Location.find(params[:id])
     @trail_location = @location.trail_locations[0]
   
-    quest = current_user.quests.create(:name => @trail_location.trail.name, :trail_id => @trail_location.trail.id, :trail_location_id => @trail_location.id, :done => true)   
+    quest = current_user.quests.find_or_create_by_name_and_trail_id_and_trail_location_id(:name => @trail_location.trail.name, :trail_id => @trail_location.trail.id, :trail_location_id => @trail_location.id, :done => true)   
     # @quest.update_attribute(:done, true)
     flash[:success] = "You have checked in to #{@location.address}"
     redirect_to mobile_quest_path(quest)
