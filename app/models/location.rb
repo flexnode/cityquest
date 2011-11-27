@@ -1,5 +1,5 @@
 class Location < ActiveRecord::Base
-  attr_accessible :address, :latitude, :longitude
+  attr_accessible :address, :latitude, :longitude, :image_url
 
   has_many :trail_locations
   has_many :trails, :through => :trail_locations
