@@ -47,3 +47,88 @@ body {
 .content {
   color: #333;
 }
+
+.profile {
+  padding: 5px;
+}
+
+.profile img {
+  margin: 0 5px 0 5px;
+  float: left;
+}
+
+.profile p {
+  margin: 5px 0 0 70px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Rammetto One', cursive;
+  text-shadow: 2px 2px 2px #F2CB8A;
+  filter: dropshadow(color=#F2CB8A, offx=2, offy=2);
+  overflow: hidden;
+}
+
+.profile p span {
+  color: #74B106;
+  font-size: 12px;
+}
+
+.checkin {
+  background-color: #F2CB8A;
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
+}
+
+.checkin p {
+  font-weight:bold;
+  margin: 0;
+}
+
+.checkin h3 {
+  font-family: 'Rammetto One', cursive;
+  text-shadow: 2px 2px 2px #eee;
+  filter: dropshadow(color=#eee, offx=2, offy=2);
+}
+
+.checkin a {
+  margin-bottom: 5px;
+}
+
+ul.activity {
+  width: 320px;
+  margin: 0 auto;
+}
+
+ul.activity a {
+  margin: 0 0 20px 0;
+}
+
+.more {
+  background-color: #7F9177;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Rammetto One', cursive;
+  text-shadow: 2px 2px 2px #F2CB8A;
+  filter: dropshadow(color=#F2CB8A, offx=2, offy=2);
+}
+
+.location {
+  background-color: #7F9177;
+  padding: 0 10px 10px 10px;
+  height: 100px;
+}
+
+.location .map {
+  float: left;
+}
+
+.location .info {
+  margin: 0 0 0 130px;
+  font-family: 'Rammetto One', cursive;
+  text-shadow: 2px 2px 2px #F2CB8A;
+  filter: dropshadow(color=#F2CB8A, offx=2, offy=2);
+}
+
+.location .info h3 {
+  font-size: 16px;
+}

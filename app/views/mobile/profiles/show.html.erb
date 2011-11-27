@@ -1,33 +1,29 @@
 <%- content_for :page_title, @trail.name %>
 
-<div class="user_info">
+<div class="profile">
   <%= link_to image_tag(current_user.avatar_url), user_path(current_user) %>
-  <p><%= current_user.name %><br />Seasoned Travel Extraordinaire</p>
+  <p><%= current_user.name %><br />
+  <span>Seasoned Travel Extraordinaire</span></p>
 </div>
 
-<div class="content container">
-  <div class="title">
-    <h1>Next Checkpoint</h1>
-    <%= link_to "Check In", "#", :class => "btn primary" %>
-  </div>
-
-  <ul class="activity media-grid">
-    <li>
-      <a href="#">
-        <img class="thumbnail" src="http://placehold.it/300x200" alt="">
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <%= image_tag("http://maps.google.com/maps/api/staticmap?size=300x200&sensor=false&zoom=15&markers=5.9834%2C116.093") %>
-      </a>
-    </li>
-  </ul>
-
-
-  <div class="title">
-    <h1><%= @locations.size %> more to complete Quest</h1>
-  </div>
-  <%= render :partial => "location", :collection => @locations %>
-
+<div class="checkin">
+  <p>Currently at</p>
+  <h3>Kompleks Sukan Likas</h3>
+  <%= link_to "Check In Here", "#", :class => "btn success large" %>
 </div>
+
+<ul class="activity media-grid">
+  <li>
+    <a href="#">
+      <%= image_tag("http://maps.google.com/maps/api/staticmap?size=300x200&sensor=false&zoom=15&markers=5.9834%2C116.093") %>
+    </a>
+  </li>
+</ul>
+
+
+<div class="more">
+  <h3><%= @locations.size %> more to complete Quest</h3>
+</div>
+
+<%= render :partial => "location", :collection => @locations %>
+

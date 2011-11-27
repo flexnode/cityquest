@@ -1,6 +1,6 @@
-<div class="activity">
+<div class="location">
   <div class="map">
-    <%= image_tag("http://placehold.it/150x100") %>
+    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=120x100&sensor=false&zoom=15&markers=#{location.latitude}%2C#{location.longitude}" %>
   </div>
   <div class="info">
     <h3><%= location.address %></h3>
