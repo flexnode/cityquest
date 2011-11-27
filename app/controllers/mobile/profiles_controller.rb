@@ -6,4 +6,8 @@ class Mobile::ProfilesController < MobileController
     @locations = @trail.locations
   end
 
+  def quests
+    @trails = Trail.all
+  end
+
 end

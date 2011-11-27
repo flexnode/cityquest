@@ -74,8 +74,12 @@ Cityquest::Application.routes.draw do
 
   namespace :mobile do
     root :to => 'profiles#show'
-    resource :profile
-    resources :quests
+    resource :profile do
+      get :quests, :on => :member
+    end
+    resources :quests do
+      get :join, :on => :member
+    end
   end
 
   namespace :admin do
