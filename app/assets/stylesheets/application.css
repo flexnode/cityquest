@@ -194,7 +194,7 @@ body {
 }
 
 .footer {
-  padding: 20px;
+  padding: 40px;
   background-color: #4B9816;
   color: #fff;
   -moz-box-shadow: 0px -5px 5px #2E6E02;
@@ -204,4 +204,11 @@ body {
 
 .footer h3 {
   color: #fff;
+}
+
+.copyright {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: #999;
 }
