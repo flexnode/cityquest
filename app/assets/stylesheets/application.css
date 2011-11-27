@@ -138,7 +138,7 @@ body {
 
 .activity {
   margin: 20px auto 30px auto;
-  height: 200px;
+  min-height: 200px;
   width: 800px;
   padding-bottom: 40px;
   border-bottom: 3px solid #EBE1A4;

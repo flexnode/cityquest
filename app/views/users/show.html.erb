@@ -5,13 +5,14 @@
     <h1><%= @user.name %>'s Latest Activity</h1>
   </div>
 
-  <div class="activity">
+  <% for quest in @user.quests.reverse %>
+    <div class="activity">
     <div class="map">
-      <%= image_tag("http://maps.google.com/maps/api/staticmap?size=300x200&sensor=false&zoom=15&markers=5.9834%2C116.093") %>
+      <%= image_tag("http://maps.google.com/maps/api/staticmap?size=300x200&sensor=false&zoom=15&markers=#{quest.trail_location.location.latitude}%2C#{quest.trail_location.location.longitude}") %>
     </div>
     <div class="info">
-      <h3>Kompleks Sukan Likas</h3>
-      <p>Checked-in here 3 hours ago</p>
+      <h3><%= quest.trail_location.location.address %></h3>
+      <p>Checked-in here <%= time_ago_in_words(quest.created_at) %> ago</p>
 
       <div class="reward">
         <%= image_tag("trophy.jpeg") %>
@@ -21,21 +22,6 @@
     </div>
   </div>
 
-  <div class="activity">
-    <div class="map">
-      <%= image_tag("http://maps.google.com/maps/api/staticmap?size=300x200&sensor=false&zoom=15&markers=5.9834%2C116.093") %>
-    </div>
-    <div class="info">
-      <h3>Kompleks Sukan Likas</h3>
-      <p>Checked-in here 3 hours ago</p>
-
-      <div class="reward">
-        <%= image_tag("trophy.jpeg") %>
-        <p><%= @user.name %> was awarded the kick-ass trophy!</p>
-      </div>
-
-    </div>
-  </div>
-
+  <% end -%>
 
 </div>
