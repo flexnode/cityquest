@@ -1,6 +1,6 @@
 class Mobile::QuestsController < MobileController
 
-  before_filter :find_quest
+  before_filter :find_quest, :only => [:show, :update]
 
   def index
     
