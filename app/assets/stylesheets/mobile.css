@@ -132,3 +132,27 @@ ul.activity a {
 .location .info h3 {
   font-size: 16px;
 }
+
+
+.reward {
+  height: 80px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  border: 5px solid #7F9177;
+  width: 400px;
+  margin: 20px 0 0 0;
+}
+
+.reward img {
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+
+.reward p {
+  margin: 15px 0 0 100px;
+  color: #7F9177;
+  font-size: 16px;
+  line-height: 24px;
+}

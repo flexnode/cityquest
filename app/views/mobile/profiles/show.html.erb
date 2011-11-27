@@ -9,7 +9,7 @@
 <div class="checkin">
   <p>Currently at</p>
   <h3>Kompleks Sukan Likas</h3>
-  <%= link_to "Check In Here", "#", :class => "btn success large" %>
+  <%= link_to "Check In Here", mobile_quest_path(:id => 1), :method => :put, :class => "btn success large" %>
 </div>
 
 <ul class="activity media-grid">
@@ -19,12 +19,6 @@
     </a>
   </li>
 </ul>
-
-<div class="content container">
-  <div class="title">
-    <h1>Next Checkpoint</h1>
-    <%= link_to "Check In", mobile_quest_path(:id => 1), :method => :put, :class => "btn primary" %>
-  </div>
 
 <div class="more">
   <h3><%= @locations.size %> more to complete Quest</h3>
