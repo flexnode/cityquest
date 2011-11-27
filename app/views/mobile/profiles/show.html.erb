@@ -9,7 +9,7 @@
 <div class="checkin">
   <p>Currently near</p>
   <h3><%= @nearby.address %></h3>
-  <%= link_to "Check In Here", mobile_quest_path(:id => 1), :method => :put, :class => "btn success large" %>
+  <%= link_to "Check In Here", mobile_quest_path(:id => @nearby.id), :method => :put, :class => "btn success large" %>
 </div>
 
 <ul class="activity media-grid">

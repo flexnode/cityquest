@@ -1,6 +1,6 @@
 class Mobile::QuestsController < MobileController
 
-  before_filter :find_quest, :only => [:show, :update]
+  before_filter :find_quest, :only => [:show]
 
   def index
     
@@ -25,8 +25,11 @@ class Mobile::QuestsController < MobileController
     # @location = @quest.location_trail.location
     # @nearby = Location.find(:all, :origin =>[session[:latitude],session[:longitude]], :within=>1)
     # success = @nearby.map(&:id).include?(@location.id)
-        
-    @quest.update_attribute(:done, true)
+    @location = Location.find(params[:id])
+    @trail_location = @location.trail_locations[0]
+  
+    quest = current_user.quests.create(:name => @trail_location.trail.name, :trail_id => @trail_location.trail.id, :trail_location_id => @trail_location.id, :done => true)   
+    # @quest.update_attribute(:done, true)
     flash[:success] = "You have checked in to #{@location.address}"
     redirect_to mobile_quest_path(quest)
   end
