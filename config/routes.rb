@@ -75,7 +75,7 @@ Cityquest::Application.routes.draw do
   namespace :mobile do
     root :to => 'profiles#show'
     resource :profile
-    resources :locations
+    resources :quests
   end
 
   namespace :admin do

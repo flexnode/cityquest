@@ -1,0 +1,55 @@
+               new_user_session GET    /sign_in(.:format)                                         {:action=>"index", :controller=>"home"}
+           destroy_user_session GET    /sign_out(.:format)                                        {:action=>"destroy", :controller=>"home"}
+         user_omniauth_callback        /users/auth/:action/callback(.:format)                     {:action=>/facebook/, :controller=>"users/omniauth_callbacks"}
+                                GET    /users/auth/:provider(.:format)                            {:controller=>"users/omniauth_callbacks", :action=>"passthru"}
+                           root        /                                                          {:controller=>"home", :action=>"index"}
+                          users GET    /users(.:format)                                           {:action=>"index", :controller=>"users"}
+                                POST   /users(.:format)                                           {:action=>"create", :controller=>"users"}
+                       new_user GET    /users/new(.:format)                                       {:action=>"new", :controller=>"users"}
+                      edit_user GET    /users/:id/edit(.:format)                                  {:action=>"edit", :controller=>"users"}
+                           user GET    /users/:id(.:format)                                       {:action=>"show", :controller=>"users"}
+                                PUT    /users/:id(.:format)                                       {:action=>"update", :controller=>"users"}
+                                DELETE /users/:id(.:format)                                       {:action=>"destroy", :controller=>"users"}
+                      api_users POST   /api/users(.:format)                                       {:action=>"create", :controller=>"api/users"}
+                  new_api_users GET    /api/users/new(.:format)                                   {:action=>"new", :controller=>"api/users"}
+                 edit_api_users GET    /api/users/edit(.:format)                                  {:action=>"edit", :controller=>"api/users"}
+                                GET    /api/users(.:format)                                       {:action=>"show", :controller=>"api/users"}
+                                PUT    /api/users(.:format)                                       {:action=>"update", :controller=>"api/users"}
+                                DELETE /api/users(.:format)                                       {:action=>"destroy", :controller=>"api/users"}
+                    mobile_root        /mobile(.:format)                                          {:controller=>"mobile/profiles", :action=>"show"}
+                 mobile_profile POST   /mobile/profile(.:format)                                  {:action=>"create", :controller=>"mobile/profiles"}
+             new_mobile_profile GET    /mobile/profile/new(.:format)                              {:action=>"new", :controller=>"mobile/profiles"}
+            edit_mobile_profile GET    /mobile/profile/edit(.:format)                             {:action=>"edit", :controller=>"mobile/profiles"}
+                                GET    /mobile/profile(.:format)                                  {:action=>"show", :controller=>"mobile/profiles"}
+                                PUT    /mobile/profile(.:format)                                  {:action=>"update", :controller=>"mobile/profiles"}
+                                DELETE /mobile/profile(.:format)                                  {:action=>"destroy", :controller=>"mobile/profiles"}
+                  mobile_quests GET    /mobile/quests(.:format)                                   {:action=>"index", :controller=>"mobile/quests"}
+                                POST   /mobile/quests(.:format)                                   {:action=>"create", :controller=>"mobile/quests"}
+               new_mobile_quest GET    /mobile/quests/new(.:format)                               {:action=>"new", :controller=>"mobile/quests"}
+              edit_mobile_quest GET    /mobile/quests/:id/edit(.:format)                          {:action=>"edit", :controller=>"mobile/quests"}
+                   mobile_quest GET    /mobile/quests/:id(.:format)                               {:action=>"show", :controller=>"mobile/quests"}
+                                PUT    /mobile/quests/:id(.:format)                               {:action=>"update", :controller=>"mobile/quests"}
+                                DELETE /mobile/quests/:id(.:format)                               {:action=>"destroy", :controller=>"mobile/quests"}
+                     admin_root        /admin(.:format)                                           {:controller=>"admin/trails", :action=>"index"}
+    admin_trail_trail_locations GET    /admin/trails/:trail_id/trail_locations(.:format)          {:action=>"index", :controller=>"admin/trail_locations"}
+                                POST   /admin/trails/:trail_id/trail_locations(.:format)          {:action=>"create", :controller=>"admin/trail_locations"}
+ new_admin_trail_trail_location GET    /admin/trails/:trail_id/trail_locations/new(.:format)      {:action=>"new", :controller=>"admin/trail_locations"}
+edit_admin_trail_trail_location GET    /admin/trails/:trail_id/trail_locations/:id/edit(.:format) {:action=>"edit", :controller=>"admin/trail_locations"}
+     admin_trail_trail_location GET    /admin/trails/:trail_id/trail_locations/:id(.:format)      {:action=>"show", :controller=>"admin/trail_locations"}
+                                PUT    /admin/trails/:trail_id/trail_locations/:id(.:format)      {:action=>"update", :controller=>"admin/trail_locations"}
+                                DELETE /admin/trails/:trail_id/trail_locations/:id(.:format)      {:action=>"destroy", :controller=>"admin/trail_locations"}
+                   admin_trails GET    /admin/trails(.:format)                                    {:action=>"index", :controller=>"admin/trails"}
+                                POST   /admin/trails(.:format)                                    {:action=>"create", :controller=>"admin/trails"}
+                new_admin_trail GET    /admin/trails/new(.:format)                                {:action=>"new", :controller=>"admin/trails"}
+               edit_admin_trail GET    /admin/trails/:id/edit(.:format)                           {:action=>"edit", :controller=>"admin/trails"}
+                    admin_trail GET    /admin/trails/:id(.:format)                                {:action=>"show", :controller=>"admin/trails"}
+                                PUT    /admin/trails/:id(.:format)                                {:action=>"update", :controller=>"admin/trails"}
+                                DELETE /admin/trails/:id(.:format)                                {:action=>"destroy", :controller=>"admin/trails"}
+          admin_location_search GET    /admin/locations/:location_id/search(.:format)             {:action=>"search", :controller=>"admin/locations"}
+                admin_locations GET    /admin/locations(.:format)                                 {:action=>"index", :controller=>"admin/locations"}
+                                POST   /admin/locations(.:format)                                 {:action=>"create", :controller=>"admin/locations"}
+             new_admin_location GET    /admin/locations/new(.:format)                             {:action=>"new", :controller=>"admin/locations"}
+            edit_admin_location GET    /admin/locations/:id/edit(.:format)                        {:action=>"edit", :controller=>"admin/locations"}
+                 admin_location GET    /admin/locations/:id(.:format)                             {:action=>"show", :controller=>"admin/locations"}
+                                PUT    /admin/locations/:id(.:format)                             {:action=>"update", :controller=>"admin/locations"}
+                                DELETE /admin/locations/:id(.:format)                             {:action=>"destroy", :controller=>"admin/locations"}

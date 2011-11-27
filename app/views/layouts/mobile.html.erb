@@ -11,6 +11,7 @@
 <body>
   <div class="header">
     <%= yield :page_title %>
+    @ <%= session[:latitude] %>, <%= session[:longitude] %>
   </div>
   <div class="content">
     <%= yield %>

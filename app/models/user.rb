@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
   #        :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable
 
+  has_many :quests
+  has_many :trails, :through => :quests
+
   # Setup accessible (or protected) attributes for your model
 
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)

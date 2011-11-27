@@ -1,0 +1,14 @@
+<%- content_for :page_title, "Check In" -%>
+
+<div class="map">
+  <%= image_tag("http://maps.google.com/maps/api/staticmap?size=300x200&sensor=false&zoom=15&markers=#{@location.latitude}%2C#{@location.longitude}") %>
+  </div>
+  <div class="info">
+    <h3><%= @location.address %></h3>
+    <p><%= time_ago_in_words @quest.updated_at %></p>
+
+    <div class="reward">
+      <%= image_tag("trophy.jpeg") %>
+      <p><%= @user.name %> was awarded the kick-ass trophy!</p>
+    </div>
+</div>

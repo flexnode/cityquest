@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111126234834) do
+ActiveRecord::Schema.define(:version => 20111127003611) do
 
   create_table "locations", :force => true do |t|
     t.string   "address"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20111126234834) do
     t.integer  "trail_location_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "done",              :default => false, :null => false
   end
 
   create_table "trail_locations", :force => true do |t|
