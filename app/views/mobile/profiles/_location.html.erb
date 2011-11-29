@@ -4,6 +4,6 @@
   </div>
   <div class="info">
     <h3><%= location.address %></h3>
-    <p>3.0 km away</p>
+    <p><%= location.distance_from([session[:latitude].to_f,session[:longitude].to_f]).round(2) %> miles</p>
   </div>
 </div>
