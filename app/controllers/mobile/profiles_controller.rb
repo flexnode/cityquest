@@ -5,7 +5,7 @@ class Mobile::ProfilesController < MobileController
     @trail = Trail.featured.first
     @locations = @trail.locations
 
-    @nearby = Location.near([session[:latitude].to_f, session[:longitude].to_f], 2).first
+    @nearby = @trail.locations.near([session[:latitude].to_f, session[:longitude].to_f], 2).first
     @nearby = Location.first if @nearby.blank?
   end
 
